@@ -12,14 +12,16 @@ namespace Array_from_set_user_parameter5
         {
 
             int n;
-            Console.WriteLine("Введите число элементов массива");
+            Console.Write("Введите x: ");
+            double x = double.Parse(Console.ReadLine());
+            Console.Write("Введите число элементов массива: ");
             n = Convert.ToInt16(Console.ReadLine());
 
             double[] Data = new double[n];
             int i = 0;
             while (i < n)
             {
-                Console.WriteLine("Введите элемент массива");
+                Console.WriteLine("Введите "+ (i+1) + " элемент массива: ");
 
                 Data[i] = double.Parse(Console.ReadLine());
                 Console.WriteLine();
@@ -29,20 +31,20 @@ namespace Array_from_set_user_parameter5
             for (i = 0; i < n; i = i + 1)
                 Console.WriteLine("Элемент[" + i + "]: " + Data[i]);
 
-            Console.WriteLine("Отсортированный массив");
+            Console.WriteLine("Отсортированный массив: ");
             Array.Sort(Data);
 
 
             for (i = 0; i < Data.Length; i++)
                 Console.Write(" " + Data[i]);
 
-
+            Console.WriteLine();
 
             for (i = 0; i < Data.Length; i++)
             {
-                if (Data[i] > 5.0)
-                    Console.WriteLine($"Data[{i}] = {Data[i]} Да, так как {Data[i]}>{5} ");
-                else Console.WriteLine($"Data[{i}] = {Data[i]} Нет, так как {Data[i]}<{5}");
+                if (Data[i] > x)
+                    Console.WriteLine($"Data[{i}] = {Data[i]} Да, так как {Data[i]}>{x} ");
+                else Console.WriteLine($"Data[{i}] = {Data[i]} Нет, так как {Data[i]}<{x}");
             }
 
             Console.ReadKey();
