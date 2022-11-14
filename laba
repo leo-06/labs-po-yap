@@ -42,9 +42,9 @@ namespace Array_from_set_user_parameter5
 
             for (i = 0; i < Data.Length; i++)
             {
-                if (Data[i] > x)
-                    Console.WriteLine($"Data[{i}] = {Data[i]} Да, так как {Data[i]}>{x} ");
-                else Console.WriteLine($"Data[{i}] = {Data[i]} Нет, так как {Data[i]}<{x}");
+                if (Data[i] > x & Data[i] < 6)
+                    Console.WriteLine($"Data[{i}] = {Data[i]} Нечетные");
+                else if (Data[i] > x & Data[i] % 2 != 0) Console.WriteLine($"Data[{i}] = {Data[i]} Четные");
             }
 
             Console.ReadKey();
